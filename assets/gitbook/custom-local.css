@@ -1,0 +1,11 @@
+a.btn:has(.fa-twitter) {
+  display: none;
+}
+
+a.btn:has(.fa-facebook) {
+  display: none;
+}
+
+a.btn:has(.fa-share-alt) {
+  display: none;
+}

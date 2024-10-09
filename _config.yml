@@ -18,23 +18,72 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: CTF School
-email: your-email@example.com
+title: Flag Forge
+# email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  CTF Learning resource
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+github_username: flag-forge
 
 # Build settings
 # theme: minima
 remote_theme: sighingnow/jekyll-gitbook
+
+toc:
+  enabled: true
+  h_min: 1
+  h_max: 3
+
+# markdown render engine.
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  input: GFM
+  math_engine: mathjax
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: 1..6
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    guess_lang: true
+
+syntax_highlighter_style: colorful
+
+markdown_ext: markdown,mkdown,mkdn,mkd,md
+
+collections:
+  crypto:
+    output: true
+    permalink: /:collection/:path/
+  pwn:
+    output: true
+    permalink: /:collection/:path/
+  reverse:
+    output: true
+    permalink: /:collection/:path/
+  web:
+    output: true
+    permalink: /:collection/:path/
+  meta:
+    output: true
+    permalink: /:collection/:path/
+  others:
+    output: true
+    permalink: /:collection/:path/
+
+exclude:
+  - _drafts
+
+ordered_collections:
+  - crypto
+  - pwn
+  - reverse
+  - web
+  - meta
+
 plugins:
   - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
