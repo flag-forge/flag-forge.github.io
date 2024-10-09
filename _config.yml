@@ -74,6 +74,7 @@ collections:
 
 exclude:
   - _drafts
+  - vendor
 
 ordered_collections:
   - crypto
