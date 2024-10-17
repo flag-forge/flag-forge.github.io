@@ -39,16 +39,14 @@ toc:
 # markdown render engine.
 markdown: kramdown
 kramdown:
+  syntax_highlighter: rouge
   auto_ids: true
   input: GFM
   math_engine: mathjax
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   toc_levels: 1..6
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    guess_lang: true
 
-syntax_highlighter_style: colorful
+  highlighter_style: github
 
 markdown_ext: markdown,mkdown,mkdn,mkd,md
 
@@ -71,6 +69,9 @@ collections:
   others:
     output: true
     permalink: /:collection/:path/
+  writeups:
+    output: true
+    permalink: /:collection/:path/
 
 exclude:
   - _drafts
@@ -82,6 +83,7 @@ ordered_collections:
   - reverse
   - web
   - meta
+  - writeups
 
 plugins:
   - jekyll-feed

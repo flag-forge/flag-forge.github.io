@@ -9,3 +9,7 @@ a.btn:has(.fa-facebook) {
 a.btn:has(.fa-share-alt) {
   display: none;
 }
+
+.highlight {
+  color: #303030;
+}
